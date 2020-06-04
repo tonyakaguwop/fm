@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>Vacant Channels on the FM Dial</title>
+
+<link rel="apple-touch-icon" href="https://radio-locator.com/webicon128.png" sizes="128x128">
+<link rel="icon" type="image/png" href="https://radio-locator.com/webicon32.png" sizes="32x32">
+<link rel="shortcut" type="image/png" href="https://radio-locator.com/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="max-width: 640px; margin: 0px auto; text-align: center">
+<h1> Vacant Fm Transmitter Stations </h1>
+<H6>BLUETOOTH - AUX - WIRELESS - HD</H6>
+<BR><BR>
+
+<div style="margin: 0px auto 12px auto; display:inline-block">
+<form method="GET" name="vacator" action="/cgi-bin/vacant">
+<input type="hidden" name="select" value="city">
+
+<div style="background:#ccc;padding:1px 3px;margin-bottom:2px"><b>Enter Your Location (U.S. Only)</b></div>
+
+<span class="smalltype nobr">City or Zip<input style="font-size:11px; margin: 0px 4px 0px 2px" type="text" name="city" size="12"></span>
+<span class="smalltype nobr">State<input style="font-size:11px;margin:0px 4px 0px 2px" type="text" name="state" size="2" maxlength="2"></span>
+<input type="image" src="https://radio-locator.com/cgi-bin/vacant/Vacant%20Channels%20on%20the%20FM%20Dial_files/go.gif" alt="GO">
+</form>
+
+<script nonce="">
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('geovaca').addEventListener('click',geoVacant);
+  document.getElementById('geovacdot').addEventListener('click',geoVacant);
+});
+
+function geoVacantCallback(position) {
+  document.getElementById('geovaca').innerHTML='Use your current location';
+  window.location.assign('https://radio-locator.com/cgi-bin/vacant/cgi-bin/vacant?select=lonlat&geo=y&latd=' + position.coords.latitude + '&lond=' + position.coords.longitude + '');
+}
+function geoVacantFailback(error) {
+  alert('Your location cannot be determined: ' + error.message);
+  document.getElementById('geovaca').innerHTML='Use your current location';
+}
+function geoVacant() {
+  document.getElementById('geovaca').innerHTML='finding your location...';
+  navigator.geolocation.getCurrentPosition(geoVacantCallback,geoVacantFailback,{enableHighAccuracy:false,timeout:20000,maximumAge:120000});
+}
+</script>
+
+<div style="margin: 16px; visibility: visible;" class="geoblock">
+<img src="https://radio-locator.com/images/geodot18.gif" title="Find vacant channels at your location" id="geovacdot" style="margin-right:1px;vertical-align:top;width:18px;height:18px;cursor:pointer" alt="">
+<b><a href="#" id="geovaca">Use your current location.</a></b>
+</div>
+
+
+</div>
+</div>
+
+
+<center> <div style="max-width: 640px; margin: 0px auto">
+
+</h1></h2><font size=5><img src="https://radio-locator.com/images/antenna_anim.gif">Find Unused FM Frequencies in Your Area</font>
+<p>
+<b><h5>Do you have a satellite radio or MP3 player that transmits sound to your
+car radio or home stereo?</b></font></h5>
+</p>
+
+<p class="smalltype">
+There are many great audio gadgets available today that include a small FM
+transmitter and work by sending a signal to any nearby radio that's tuned to
+its frequency.
+</p><p>
+
+</p><p class="smalltype">
+These devices work best if you choose an unused frequency on the FM dial.  It's also
+best not to pick a frequency that's too close to a strong FM station.  You can use this
+page to find vacant frequencies in your area that are best suited for use with your
+audio device.
+</p>
+
+<div style="max-width: 640px; margin: 0px auto;">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-" data-ad-slot="5087837444" data-ad-format="auto"></ins>
+<script nonce="">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+
+
+</body></html>
